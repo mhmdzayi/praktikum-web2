@@ -1,6 +1,6 @@
 <?php
 require('../fpdf186/fpdf.php');
-$pdf = new FPDF('L', 'mm', 'A4');
+$pdf = new FPDF('P', 'mm', 'A4');
 $pdf->SetLeftMargin(20);
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 16);
