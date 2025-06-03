@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Jun 2025 pada 03.39
+-- Waktu pembuatan: 03 Jun 2025 pada 04.30
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.0.28
 
@@ -49,6 +49,27 @@ INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `alamat`, `jenis_kelamin`, `email`
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `matakuliah`
+--
+
+CREATE TABLE `matakuliah` (
+  `id` int(11) NOT NULL,
+  `kode` varchar(10) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `sks` int(11) NOT NULL,
+  `semester` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `matakuliah`
+--
+
+INSERT INTO `matakuliah` (`id`, `kode`, `nama`, `sks`, `semester`) VALUES
+(2, 'MGU110', 'Agama Islam', 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `user`
 --
 
@@ -77,6 +98,12 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `matakuliah`
+--
+ALTER TABLE `matakuliah`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
@@ -91,6 +118,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `matakuliah`
+--
+ALTER TABLE `matakuliah`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
